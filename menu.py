@@ -52,4 +52,5 @@ while run:
 
     # Обновление экрана
     pygame.display.update()
+
 pygame.quit()

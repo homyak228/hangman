@@ -4,11 +4,13 @@ BUTTON_WIDTH = 180
 BUTTON_HEIGHT = 60
 BUTTON_OFFSET = 30
 MAX_ATTEMPTS = 8
+
 CATEGORIES = [
     "food",
     "animals",
     "things",
 ]
+
 WORDS = {
     "Шоколад":"food",
     "Мороженное":"food",
