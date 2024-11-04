@@ -14,6 +14,8 @@ def start_menu():
     # Загрузка спрайтов
     background_image = pygame.transform.scale(pygame.image.load("./assets/sprites/Wild_west.png"), [settings.WIDTH, settings.HEIGHT])
     button_image = pygame.transform.scale(pygame.image.load("./assets/sprites/button.png"), [settings.BUTTON_WIDTH, settings.BUTTON_HEIGHT])
+    small_button = pygame.transform.scale(pygame.image.load("./assets/sprites/button.png"), [settings.SML_BTN_WIDTH, settings.SML_BTN_HEIGHT])
+    no_sound = pygame.transform.scale(pygame.image.load("./assets/sprites/no_sound.png"), [settings.SML_BTN_WIDTH, settings.SML_BTN_HEIGHT])
 
     # Загрузка музыки
     pygame.mixer.music.load("./assets/sounds/Background_music.mp3")
@@ -45,6 +47,15 @@ def start_menu():
                     if mouse_y >= 260 and mouse_y <= 320:
                         run = False
 
+                if mouse_x >= 165 and mouse_x <= 165 + settings.SML_BTN_WIDTH:
+                    if mouse_y >= 340 and mouse_y <= 340 + settings.SML_BTN_HEIGHT:
+                        if settings.IS_MUSIC:
+                            settings.IS_MUSIC = False
+                            pygame.mixer.music.set_volume(0)
+                        else:
+                            settings.IS_MUSIC = True
+                            pygame.mixer.music.set_volume(settings.VOLUME)
+
         # Отрисовка фона
         window.blit(background_image, [0,0])
 
@@ -57,6 +68,9 @@ def start_menu():
 
         # Отрисовка логотипа
         window.blit(menu_font.render("Виселица", True, [255, 210, 0]), [98, 25])
+
+        window.blit(small_button, [165, 340])
+        window.blit(no_sound, [165, 340])
 
         # Обновление экрана
         pygame.display.update()
