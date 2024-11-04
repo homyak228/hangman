@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="57157bca-6360-426f-8656-f2841b4c90cf" name="Changes" comment="Добавлены звуки и кнопки с буквами">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/HaginCapsMedium-Medium.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/HaginCapsThin-Thin.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/HaginCapsThin-Thin.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/game.py" afterDir="false" />
-    </list>
+    <list default="true" id="57157bca-6360-426f-8656-f2841b4c90cf" name="Changes" comment="Добавлен функционал кнопкам с буквами" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -159,7 +153,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730453092385</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Добавлен функционал кнопкам с буквами">
+      <option name="closed" value="true" />
+      <created>1730731617955</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1730731617956</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -177,6 +179,7 @@
     <MESSAGE value="Работа над меню завершенна" />
     <MESSAGE value="Добавлен задний фон в игру" />
     <MESSAGE value="Добавлены звуки и кнопки с буквами" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлены звуки и кнопки с буквами" />
+    <MESSAGE value="Добавлен функционал кнопкам с буквами" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлен функционал кнопкам с буквами" />
   </component>
 </project>
