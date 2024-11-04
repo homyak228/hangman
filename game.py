@@ -1,6 +1,6 @@
 import pygame
 import settings
-from settings import LETTER_HEIGHT, LETTER_OFFSET, LETTER_START_POS
+from settings import LETTER_HEIGHT, LETTER_OFFSET, LETTER_START_POS, LETTER_WIDTH
 
 
 def start_game():
@@ -16,6 +16,7 @@ def start_game():
     letter_button = pygame.transform.scale(pygame.image.load("./assets/sprites/button.png"), [settings.LETTER_WIDTH, settings.LETTER_HEIGHT])
     button_image = pygame.transform.scale(pygame.image.load("./assets/sprites/button.png"), [90, 40])
     no_image = pygame.transform.scale(pygame.image.load("./assets/sprites/no.png"), [30,35])
+    click = pygame.mixer.Sound("./assets/sounds/click.mp3")
 
     run = True
     while run:
@@ -28,6 +29,27 @@ def start_game():
                 if mouse_x >= 300 and mouse_x <= 390:
                     if mouse_y >= 10 and mouse_y <= 50:
                         run = False
+
+                for x in range(10):
+                    if mouse_x >= 2 + x * (35+5) and mouse_x <= (2 + x * (35+5)) + LETTER_WIDTH:
+                        if mouse_y >= LETTER_START_POS and mouse_y <= LETTER_START_POS + LETTER_HEIGHT:
+                            print(str(chr(1072 + x)))
+                            click.play()
+                for y in range(10):
+                    if mouse_x >= 2 + y * (35+5) and mouse_x <= (2 + y * (35+5)) + LETTER_WIDTH:
+                        if mouse_y >= LETTER_START_POS + LETTER_HEIGHT + LETTER_OFFSET and mouse_y <= (LETTER_START_POS + LETTER_HEIGHT + LETTER_OFFSET) + LETTER_HEIGHT:
+                            print(str(chr(1082 + y)))
+                            click.play()
+                for z in range(10):
+                    if mouse_x >= 2 + z * (35 + 5) and mouse_x <= (2 + z * (35 + 5)) + LETTER_WIDTH:
+                        if mouse_y >= LETTER_START_POS + (LETTER_HEIGHT + LETTER_OFFSET) * 2 and mouse_y <= (LETTER_START_POS + (LETTER_HEIGHT + LETTER_OFFSET) * 2) + LETTER_HEIGHT:
+                            print(str(chr(1092 + z)))
+                            click.play()
+                for a in range(2):
+                    if mouse_x >= 150 + a * (35 + 5) and mouse_x <= (150 + a * (35 + 5)) + LETTER_WIDTH:
+                        if mouse_y >= LETTER_START_POS + (LETTER_HEIGHT + LETTER_OFFSET) * 3 and mouse_y <= (LETTER_START_POS + (LETTER_HEIGHT + LETTER_OFFSET) * 3) + LETTER_HEIGHT:
+                            print(str(chr(1102 + a)))
+                            click.play()
 
         window.blit(background_image, [0,0])
 

@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="57157bca-6360-426f-8656-f2841b4c90cf" name="Changes" comment="Добавлен задний фон в игру">
-      <change afterPath="$PROJECT_DIR$/assets/sounds/Background_music.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/sounds/click.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/sprites/no.png" afterDir="false" />
+    <list default="true" id="57157bca-6360-426f-8656-f2841b4c90cf" name="Changes" comment="Добавлены звуки и кнопки с буквами">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/HaginCapsMedium-Medium.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/HaginCapsThin-Thin.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/HaginCapsThin-Thin.ttf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/game.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/menu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +26,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;homyak228&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/homyak228/hangman.git&quot;,
+    &quot;accountId&quot;: &quot;da6298a1-9f47-47c3-8a5b-9a8ff68bcae3&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -37,15 +47,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.game.executor&quot;: &quot;Run&quot;,
-    &quot;Python.menu.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/gia10/PycharmProjects/Hangman/menu.py&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.game.executor": "Run",
+    "Python.menu.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/gia10/PycharmProjects/Hangman/menu.py"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\gia10\PycharmProjects\Hangman\assets\sounds" />
@@ -140,7 +151,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730386423368</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Добавлены звуки и кнопки с буквами">
+      <option name="closed" value="true" />
+      <created>1730453092385</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1730453092385</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -157,6 +176,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Работа над меню завершенна" />
     <MESSAGE value="Добавлен задний фон в игру" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлен задний фон в игру" />
+    <MESSAGE value="Добавлены звуки и кнопки с буквами" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлены звуки и кнопки с буквами" />
   </component>
 </project>

@@ -17,8 +17,8 @@ def start_menu():
 
     # Загрузка музыки
     pygame.mixer.music.load("./assets/sounds/Background_music.mp3")
-    pygame.mixer.music.set_volume(0)
-    pygame.mixer.music.play(1, 0, 0)
+    pygame.mixer.music.set_volume(1)
+    pygame.mixer.music.play(True, 0, 0)
     click = pygame.mixer.Sound("./assets/sounds/click.mp3")
 
     run = True
