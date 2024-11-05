@@ -1,6 +1,4 @@
 .venv
 build
 dist
-menu.spec
-Hangman-debug.exe.spec
-Hangman.exe.spec
+*.spec

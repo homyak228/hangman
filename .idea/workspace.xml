@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="57157bca-6360-426f-8656-f2841b4c90cf" name="Changes" comment="Удалены категории слов">
-      <change afterPath="$PROJECT_DIR$/assets/sprites/no_sound.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/menu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
-    </list>
+    <list default="true" id="57157bca-6360-426f-8656-f2841b4c90cf" name="Changes" comment="Первый релиз" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,11 +53,12 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\gia10\PycharmProjects\Hangman" />
       <recent name="C:\Users\gia10\PycharmProjects\Hangman\assets\sprites" />
       <recent name="C:\Users\gia10\PycharmProjects\Hangman\assets\sounds" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.game">
+  <component name="RunManager" selected="Python.menu">
     <configuration name="game" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Hangman" />
       <option name="ENV_FILES" value="" />
@@ -181,7 +177,31 @@
       <option name="project" value="LOCAL" />
       <updated>1730731833497</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Закончена работа над угадыванием слова и кнопками с буквами">
+      <option name="closed" value="true" />
+      <created>1730820406129</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1730820406129</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Первый релиз">
+      <option name="closed" value="true" />
+      <created>1730820546764</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1730820546764</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Первый релиз">
+      <option name="closed" value="true" />
+      <created>1730820570782</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1730820570782</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -202,6 +222,8 @@
     <MESSAGE value="Добавлен функционал кнопкам с буквами" />
     <MESSAGE value="Изменил Readme" />
     <MESSAGE value="Удалены категории слов" />
-    <option name="LAST_COMMIT_MESSAGE" value="Удалены категории слов" />
+    <MESSAGE value="Закончена работа над угадыванием слова и кнопками с буквами" />
+    <MESSAGE value="Первый релиз" />
+    <option name="LAST_COMMIT_MESSAGE" value="Первый релиз" />
   </component>
 </project>
