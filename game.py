@@ -1,15 +1,18 @@
 import pygame
 import settings
-from settings import LETTER_HEIGHT, LETTER_OFFSET, LETTER_START_POS, LETTER_WIDTH, MAX_ATTEMPTS
+from settings import LETTER_HEIGHT, LETTER_OFFSET, LETTER_START_POS, LETTER_WIDTH, MAX_ATTEMPTS, BUTTON_WIDTH, \
+    BUTTON_HEIGHT, WORDS
 import random
-import time
 
 def check_letter(letter: str, word: str):
+    output = []
+    counter = 0
     for x in word:
         if x == letter:
-            if word.cout()
-            return word.index(letter)
-    return -1
+            output.append(counter)
+        counter += 1
+    print(output)
+    return output
 
 def to_string(string: list):
     output = ""
@@ -29,6 +32,7 @@ def start_game():
     guessing_word = list(len(word) * "_")
     attempts = MAX_ATTEMPTS
     no_image_pos = []
+    game_over = False
 
     # Згрузка ассетов
     background_image = pygame.transform.scale(pygame.image.load("./assets/sprites/Wild_west.png"), [settings.WIDTH, settings.HEIGHT])
@@ -56,9 +60,9 @@ def start_game():
                         if mouse_y >= LETTER_START_POS and mouse_y <= LETTER_START_POS + LETTER_HEIGHT:
                             print(str(chr(1072 + x)))
                             click.play()
-                            if check_letter(str(chr(1072 + x)), word.lower()) != -1:
-                                word.replace(word[check_letter(str(chr(1072 + x)), word.lower())], "_")
-                                guessing_word[check_letter(str(chr(1072 + x)), word.lower())] = word[check_letter(str(chr(1072 + x)), word.lower())]
+                            if check_letter(str(chr(1072 + x)), word.lower()) != []:
+                                for t in check_letter(str(chr(1072 + x)), word.lower()):
+                                    guessing_word[t] = word[t]
                             else:
                                 attempts -= 1
                                 no_image_pos.append([2 + x * (35 + 5), LETTER_START_POS])
@@ -67,22 +71,45 @@ def start_game():
                         if mouse_y >= LETTER_START_POS + LETTER_HEIGHT + LETTER_OFFSET and mouse_y <= (LETTER_START_POS + LETTER_HEIGHT + LETTER_OFFSET) + LETTER_HEIGHT:
                             print(str(chr(1082 + y)))
                             click.play()
-                            if check_letter(str(chr(1082 + y)), word.lower()) != -1:
-                                word.replace(word[check_letter(str(chr(1082 + y)), word.lower())], "_")
-                                guessing_word[check_letter(str(chr(1082 + y)), word.lower())] = word[check_letter(str(chr(1082 + y)), word.lower())]
+                            if check_letter(str(chr(1082 + y)), word.lower()) != []:
+                                for t in check_letter(str(chr(1082 + y)), word.lower()):
+                                    guessing_word[t] = word[t]
                             else:
                                 attempts -= 1
                                 no_image_pos.append([2 + y * (35 + 5), LETTER_START_POS + LETTER_HEIGHT + LETTER_OFFSET])
                 for z in range(10):
                     if mouse_x >= 2 + z * (35 + 5) and mouse_x <= (2 + z * (35 + 5)) + LETTER_WIDTH:
                         if mouse_y >= LETTER_START_POS + (LETTER_HEIGHT + LETTER_OFFSET) * 2 and mouse_y <= (LETTER_START_POS + (LETTER_HEIGHT + LETTER_OFFSET) * 2) + LETTER_HEIGHT:
-                            print(str(chr(1092 + z)))
                             click.play()
+                            print(str(chr(1092 + z)))
+                            if check_letter(str(chr(1092 + z)), word.lower()) != []:
+                                for t in check_letter(str(chr(1092 + z)), word.lower()):
+                                    guessing_word[t] = word[t]
+                            else:
+                                attempts -= 1
+                                no_image_pos.append(
+                                    [2 + z * (35 + 5), LETTER_START_POS + (LETTER_HEIGHT + LETTER_OFFSET) * 2])
                 for a in range(2):
                     if mouse_x >= 150 + a * (35 + 5) and mouse_x <= (150 + a * (35 + 5)) + LETTER_WIDTH:
                         if mouse_y >= LETTER_START_POS + (LETTER_HEIGHT + LETTER_OFFSET) * 3 and mouse_y <= (LETTER_START_POS + (LETTER_HEIGHT + LETTER_OFFSET) * 3) + LETTER_HEIGHT:
                             print(str(chr(1102 + a)))
                             click.play()
+                            if check_letter(str(chr(1102 + a)), word.lower()) != []:
+                                for t in check_letter(str(chr(1102 + a)), word.lower()):
+                                    guessing_word[t] = word[t]
+                            else:
+                                attempts -= 1
+                                no_image_pos.append(
+                                    [150 + a * (35 + 5), LETTER_START_POS + (LETTER_HEIGHT + LETTER_OFFSET) * 3])
+                if mouse_x >= 140 and mouse_x <= 140 + BUTTON_WIDTH:
+                    if mouse_y >= 100 and mouse_y <= 100 + BUTTON_HEIGHT:
+                        if game_over:
+                            click.play()
+                            attempts = MAX_ATTEMPTS
+                            no_image_pos = []
+                            word = random.choice(WORDS)
+                            guessing_word = list(len(word) * "_")
+                            game_over = False
         # Отрисовка фона
         window.blit(background_image, [0,0])
 
@@ -109,6 +136,15 @@ def start_game():
         if attempts <= 0:
             window.blit(game_font.render("Вы проиграли!", True, [0, 65, 65]), [100, 60])
             window.blit(game_font.render(f"Загаданное слово: {word}", True, [0, 65, 65]), [20, 90])
+            window.blit(button_image, [140, 130])
+            window.blit(game_font.render("Ещe!", True, [255, 65, 0]), [155, 130])
+            game_over = True
+
+        if to_string(guessing_word) == word and attempts > 0:
+            window.blit(game_font.render("Вы победили!", True, [0,255,0]), [100,60])
+            window.blit(button_image, [140, 100])
+            window.blit(game_font.render("Ещe!", True, [255, 65, 0]), [155, 100])
+            game_over = True
 
         window.blit(word_guess_bg, [20, LETTER_START_POS - LETTER_OFFSET * 2 - LETTER_HEIGHT])
         window.blit(game_font.render(to_string(guessing_word), True, [255, 0, 50]), [20, LETTER_START_POS - LETTER_OFFSET * 2 - LETTER_HEIGHT])
