@@ -46,7 +46,7 @@ def start_menu():
                 if mouse_x >= 105 and mouse_x <= 105 + settings.BUTTON_WIDTH:
                     if mouse_y >= 260 and mouse_y <= 320:
                         run = False
-
+                # Проверка нажатия на кнопку вкл. звука
                 if mouse_x >= 165 and mouse_x <= 165 + settings.SML_BTN_WIDTH:
                     if mouse_y >= 340 and mouse_y <= 340 + settings.SML_BTN_HEIGHT:
                         if settings.IS_MUSIC:
@@ -68,13 +68,13 @@ def start_menu():
 
         # Отрисовка логотипа
         window.blit(menu_font.render("Виселица", True, [255, 210, 0]), [98, 25])
-
+        # Отрисовка кнопки выкл. звука
         window.blit(small_button, [165, 340])
         window.blit(no_sound, [165, 340])
 
         # Обновление экрана
         pygame.display.update()
-
+# Запуск игры
 if __name__ == "__main__":
     start_menu()
     pygame.quit()

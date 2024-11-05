@@ -1,19 +1,19 @@
-WIDTH = 400
-HEIGHT = 400
-BUTTON_WIDTH = 180
-BUTTON_HEIGHT = 60
-LETTER_HEIGHT = 30
-LETTER_WIDTH = 35
-LETTER_OFFSET = 8
-LETTER_START_POS = 248
-MAX_ATTEMPTS = 8
-SML_BTN_WIDTH = 56
-SML_BTN_HEIGHT = 56
-IS_MUSIC = True
-IS_SFX = True
-VOLUME = 0.4
+WIDTH = 400 # Ширина эрана
+HEIGHT = 400 # Высота экрана
+BUTTON_WIDTH = 180 # Шириина кнопок в меню
+BUTTON_HEIGHT = 60 # Высота кнопка в меню
+LETTER_HEIGHT = 30 # Высота кнопки с буквой
+LETTER_WIDTH = 35 # Ширина кнопки с буквой
+LETTER_OFFSET = 8 # Сдвиг кнопки с буквой
+LETTER_START_POS = 248 # Начальная позиция кнопок с буквами
+MAX_ATTEMPTS = 8 # Максимальное количество попыток угадывания
+SML_BTN_WIDTH = 56 # Ширина кнопок настройки
+SML_BTN_HEIGHT = 56 # Высота кнопк настройки
+IS_MUSIC = True # Играет ли сейчас музыка
+IS_SFX = True # Включены ли звуки
+VOLUME = 0.4 # Громкость
 
-WORDS = {
+WORDS = [ # Список слов для угадывания
     "Шоколад",
     "Мороженное",
     "Вода",
@@ -28,4 +28,4 @@ WORDS = {
     "Рыба",
     "Лосось",
     "Треска"
-}
+]
