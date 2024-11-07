@@ -1,6 +1,7 @@
 # Лучшая игра Виселица на Pygame
 
 Открыв игру вы попадаете в меню:
+
 ![menu_screenshot.PNG](assets/sprites/menu_screenshot.PNG)
 
 *(Меню рис. 1)*
